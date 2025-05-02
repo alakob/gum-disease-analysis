@@ -1,12 +1,9 @@
-version: '3.8'
+version: '3'
 
 services:
   gum-disease-app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    build: .
     ports:
       - "8505:8502"
     env_file:
       - .env
-    restart: unless-stopped
